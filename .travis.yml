@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t halderripan/docker-react-aws -f Dockerfile.f .
+  - docker build -t halderripan/docker-react-aws -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true halderripan/docker-react-aws npm run test -- --coverage
